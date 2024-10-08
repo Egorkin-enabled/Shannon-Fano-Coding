@@ -284,7 +284,7 @@ int main(int args, char** vars) {
     if(args > 1 && !strcmp(vars[1], "--help")) {
         wprintf(L"**DESCRIPTION**\n");
         wprintf(L"Program for Shannon-Fano coding calculation.\n");
-        wprintf(L"Made as a result of eduactional process so not safe.\n");
+        wprintf(L"Made as a result of eduactional process, so not safe.\n");
         wprintf(L"2024, Kozlov Egor, 2/278, ISUCT.\n");
         wprintf(L"\n");
         wprintf(L"**ARGUMENTS**\n");
@@ -301,9 +301,9 @@ int main(int args, char** vars) {
         wprintf(L"...\n");
         wprintf(L"<symbol n> <probability n>\n");
         wprintf(L"\n");
-        wprintf(L"For simplicity probabilities present as integers.\n");
+        wprintf(L"For simplicity probabilities are present as integers.\n");
         wprintf(L"That means that you have multiply probabilities by 10^x.\n"
-                "to exclude point part.\n");
+                "That excludes point part.\n");
         wprintf(L"For example, symbols:\n"
                  "symbol  probability\n\n"
                  "a       0.75\n"
@@ -315,8 +315,8 @@ int main(int args, char** vars) {
                  "b  5\n"
                  "c 20\n\n"
                );
-        wprintf(L"Records may be written in any order.\n"
-                 "Program sort list by probability by itself.\n");
+        wprintf(L"Symbols may be written in any order.\n"
+                 "Program sort them by probability automatically.\n");
         return 0; 
     }
 
@@ -337,8 +337,8 @@ int main(int args, char** vars) {
     for(int x = 0; x < len; ++x)
         prob += probs[x];
 
-    wprintf(L"Symbol readen: %i\n", len);
-    wprintf(L"Total prob sum: %i\n", prob);
+    wprintf(L"Symbols read: %i\n", len);
+    wprintf(L"Probability sum: %i\n", prob);
 
     bool validProbs = prob != 0;
     while(prob) {
